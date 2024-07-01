@@ -1,17 +1,64 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+input[type="number"] {
+  -webkit-appearance: none; /* Remove default Safari styles */
+  -moz-appearance: textfield; /* Remove default Firefox styles */
+ 
+  border: none; /* Remove border */
+  font: inherit; /* Inherit font styles */
+  color: inherit; /* Inherit text color */
+  outline: none; /* Remove outline */
+}
+
+/* Reset hover styles */
+input[type="number"]:hover {
+  border: none;
+  outline: none;
+}
+
+/* Reset focus styles */
+input[type="number"]:focus {
+  border: none;
+  outline: none;
+}
+
+/* Remove default spin buttons in number input */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  
+}
+
+input[type="number"]::-moz-outer-spin-button,
+input[type="number"]::-moz-inner-spin-button {
+  -moz-appearance: none;
+ 
+}
+
+
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 
+
+
+*{
+  font-weight: 700;
+  transition: all 200ms;
+}
+
 body{
   background-color: rgb(193, 213, 221);
   font-family: space mono;
   width: 100vw;
-  height: 100vh;
+  height: 110vh;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+input[type="radio"] {
+  display:none
 }
