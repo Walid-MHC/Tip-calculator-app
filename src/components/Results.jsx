@@ -1,6 +1,7 @@
 import React from "react";
 
-const Results = () => {
+const Results = ({totalBill, tip, handleReset}) => {
+    
   return (
     <div className="flex-1 flex flex-col justify-between bg-cyan-very-dark p-[1.5rem] xs:p-[2rem] rounded-lg  xs:min-w-[350px] ]">
       <div className="mb-12">
@@ -10,7 +11,7 @@ const Results = () => {
             <p className="text-[13px] xs:text-[14px] text-cyan-grayish font-bold">/ person</p>
           </div>
           <span className="text-[2rem] xs:text-[2.5rem] text-cyan-strong font-bold">
-            $4.27
+            ${tip ? tip.toFixed(2) : '0.00'}
           </span>
         </div>
         <div className="flex items-center justify-between">
@@ -19,11 +20,11 @@ const Results = () => {
             <p className="text-[13px] xs:text-[14px] text-cyan-grayish font-bold">/ person</p>
           </div>
           <span className="text-[2rem] xs:text-[2.5rem] text-cyan-strong font-bold">
-            $4.27
+            ${totalBill ? totalBill.toFixed(2) : '0.00'}
           </span>
         </div>
       </div>
-      <button className="w-full uppercase text-[20px] text-cyan-very-dark font-bold bg-cyan-strong py-[14px] rounded-lg">Reset</button>
+      <button className="w-full uppercase text-[20px] text-cyan-very-dark font-bold bg-cyan-strong py-[14px] rounded-lg" onClick={handleReset}>Reset</button>
     </div>
   );
 };

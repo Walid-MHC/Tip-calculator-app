@@ -1,7 +1,7 @@
 import React from "react";
 import { dollarIcon } from "../assets";
 
-const BillInput = ({handleBillChange}) => {
+const BillInput = ({bill, handleBillChange}) => {
     const handleChange = (event) =>{
         const value = event.target.value
         handleBillChange(value)
@@ -16,6 +16,7 @@ const BillInput = ({handleBillChange}) => {
           type="number"
           id="bill"
           placeholder="$00.0"
+          value={bill === 0 ? '': bill}
           onChange={handleChange}
         />
         <img className="h-[1.25rem] absolute left-2 top-1/2 -translate-y-1/2" src={dollarIcon} alt="$" />
